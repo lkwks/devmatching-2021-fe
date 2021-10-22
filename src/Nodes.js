@@ -38,6 +38,7 @@ export default class Nodes
         {
             let {type, id, filePath, name} = elem;
             if (type === "DIRECTORY") filePath = "null";
+            type = type.toLowerCase();
             return `
         <li class="Node">
             <img src="./assets/${type}.png" nodeId=${id} filePath="${filePath}" title="${name}">
